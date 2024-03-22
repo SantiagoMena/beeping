@@ -1,11 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "beeping/prueba",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Beeping prueba técnica.",
+    "keywords": ["laravel", "framework", "beeping"],
     "license": "MIT",
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
