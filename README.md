@@ -1,5 +1,9 @@
 # Beeping Prueba
 
+## Copiar `.env.example` a `.env`
+Abrir la consola en el directorio raiz del proyecto y ejecutar:
+
+`cp .env.example .env`
 
 ## Migrate & Seed Database
 1. Abrir Container Shell
