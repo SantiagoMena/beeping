@@ -1,15 +1,28 @@
 # Beeping Prueba
 
+## Requeriments
+Requisitos para correr el proyecto:
+    - Instalar composer [https://getcomposer.org/download/](https://getcomposer.org/download/)
+    - Instalar docker [https://www.docker.com/](https://www.docker.com/)
+
 ## Copy `.env.example` to `.env`
 Abrir la consola en el directorio raiz del proyecto y ejecutar:
 
-`cp .env.example .env`
+    `cp .env.example .env`
 
 ## Add APP_KEY to `.env`
 Agrega una key al archivo `.env`
 
     EJ: APP_KEY=base64:f+DkY8uLlgTERh6bgwXJlryZXkXyrbkzvONRJNtx8bM=
 
+## Run Composer
+Abrir la consola en el directorio raiz del proyecto y ejecutar:
+    `composer install`
+    
+## Run sail container
+Abrir la consola en el directorio raiz del proyecto y ejecutar:
+    `./vendor/bin/sail up`
+    
 ## Migrate & Seed Database
 1. Abrir Container Shell
 
