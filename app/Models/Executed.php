@@ -15,4 +15,11 @@ class Executed extends Model
      * @var string
      */
     protected $table = 'executed';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['total_orders', 'total_cost'];
 }
