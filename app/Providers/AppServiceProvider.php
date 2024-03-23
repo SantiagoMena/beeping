@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Jobs\ProcessExecuteTotal;
 use App\Repositories\ExecutedRepository;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->app->bindMethod([ProcessExecuteTotal::class, 'handle'], function (ProcessExecuteTotal $job, Application $app) {
+            return $job->handle();
+        });
     }
 }
