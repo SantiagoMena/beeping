@@ -28,6 +28,10 @@ En `.env` asegurarse de tener:
 
    `php artisan horizon`
 
+3. Probar Horizon
+
+   [http://localhost/horizon](http://localhost/horizon)
+
 ## Start Schedule
 1. Abrir Container Shell
 
@@ -39,3 +43,7 @@ En `.env` asegurarse de tener:
 
     - Iniciar cron en producción
     `php artisan schedule:run`
+
+## Ver Proyecto
+
+   [http://localhost](http://localhost/)
