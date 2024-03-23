@@ -16,8 +16,11 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="flex justify-center items-center h-screen">
+        <div class="flex justify-center items-center h-screen" style="flex-direction: column; gap: 10px;">
+            <h1 class="text-xl font-bold text-center text-gray-900 mb-8">Orders - Beeping</h1>
             <livewire:orders />
+            <br>
+            <livewire:executed />
         </div>
     </body>
 </html>

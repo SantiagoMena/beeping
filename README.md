@@ -1,5 +1,9 @@
 # Beeping Prueba
 
+## Copiar `.env.example` a `.env`
+Abrir la consola en el directorio raiz del proyecto y ejecutar:
+
+`cp .env.example .env`
 
 ## Migrate & Seed Database
 1. Abrir Container Shell
@@ -23,3 +27,15 @@ En `.env` asegurarse de tener:
 2. Correr Horizon
 
    `php artisan horizon`
+
+## Start Schedule
+1. Abrir Container Shell
+
+   `./vendor/bin/sail shell`
+
+2. Correr Cron
+   - Iniciar cron localmente:
+       `php artisan schedule:work`
+
+    - Iniciar cron en producción
+    `php artisan schedule:run`
