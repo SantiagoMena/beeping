@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Jobs\ProcessExecuteTotal;
+use App\Livewire\Orders;
 use App\Repositories\ExecutedRepository;
+use App\Repositories\OrderRepository;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +18,15 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(ExecutedRepository::class, function ($app) {
             return new ExecutedRepository();
+        });
+
+        $this->app->bind(OrderRepository::class, function ($app) {
+            return new OrderRepository();
+        });
+
+
+        $this->app->bind(Orders::class, function ($app) {
+            return new Orders(new OrderRepository());
         });
     }
 
