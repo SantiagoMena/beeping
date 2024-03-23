@@ -23,11 +23,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(OrderRepository::class, function ($app) {
             return new OrderRepository();
         });
-
-
-        $this->app->bind(Orders::class, function ($app) {
-            return new Orders(new OrderRepository());
-        });
     }
 
     /**
