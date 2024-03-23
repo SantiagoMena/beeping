@@ -1,9 +1,14 @@
 # Beeping Prueba
 
-## Copiar `.env.example` a `.env`
+## Copy `.env.example` to `.env`
 Abrir la consola en el directorio raiz del proyecto y ejecutar:
 
 `cp .env.example .env`
+
+## Add APP_KEY to `.env`
+Agrega una key al archivo `.env`
+
+    EJ: APP_KEY=base64:f+DkY8uLlgTERh6bgwXJlryZXkXyrbkzvONRJNtx8bM=
 
 ## Migrate & Seed Database
 1. Abrir Container Shell
