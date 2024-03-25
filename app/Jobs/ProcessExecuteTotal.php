@@ -31,15 +31,11 @@ class ProcessExecuteTotal implements ShouldQueue
     public function handle(): void
     {
         $total = DB::table('orders_lines')
-            ->join('products', 'orders_lines.product_id', '=', 'products.id')
-            ->select(
-                DB::raw('SUM(orders_lines.qty * products.cost) as total_cost'),
-                DB::raw('COUNT(orders_lines.order_id) as total_orders')
-            )
-            ->get();
+            ->join('products', 'orders_lines.product_id', '=', 'products.id');
 
-        $totalCost = $total->first()->total_cost;
-        $totalOrders = $total->first()->total_orders;
+        $totalCost = $total->sum(DB::raw('orders_lines.qty * products.cost'));
+        $totalOrders = $total->count('orders_lines.order_id');
+
 
         $endpoint = "http://localhost/api/executed/create";
         $client = new Client([
